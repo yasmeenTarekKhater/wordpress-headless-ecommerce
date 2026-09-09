@@ -16,4 +16,34 @@ define(
     plugin_dir_path(__FILE__)
 );
 
+
+/*
+|--------------------------------------------------------------------------
+| Activation
+|--------------------------------------------------------------------------
+*/
+
+function simple_shop_activate()
+{
+    add_role(
+        'customer',
+        'Customer',
+        [
+            'read' => true,
+        ]
+    );
+}
+
+register_activation_hook(
+    __FILE__,
+    'simple_shop_activate'
+);
+
+/*
+|--------------------------------------------------------------------------
+| Includes
+|--------------------------------------------------------------------------
+*/
+
 require_once SIMPLE_SHOP_API_PATH . 'includes/products-api.php';
+require_once SIMPLE_SHOP_API_PATH . 'includes/auth-api.php';
