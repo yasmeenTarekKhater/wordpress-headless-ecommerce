@@ -15,6 +15,22 @@ add_action('rest_api_init', function () {
         'permission_callback' => '__return_true',  // Anyone may access this endpoint.
     ]);
 
+     // Single Product
+     //GET /shop/v1/products/{slug}
+    register_rest_route('shop/v1', '/products/(?P<slug>[^/]+)', [
+        'methods' => WP_REST_Server::READABLE,
+        'callback' => 'simple_shop_get_product',
+        'permission_callback' => '__return_true',
+
+        'args' => [
+            'slug' => [
+                'required' => true,
+                'sanitize_callback' => 'sanitize_title',
+                // This means WordPress sanitizes the incoming slug before our callback receives it.
+            ],
+        ],
+    ]);
+
 });
 
 function simple_shop_format_product($post)
@@ -308,5 +324,24 @@ function simple_shop_get_products(WP_REST_Request $request)
 
         ],
 
+    ]);
+}
+
+function simple_shop_get_product(WP_REST_Request $request)
+{
+    $slug = $request->get_param('slug');
+
+    $product = get_page_by_path($slug, OBJECT, ['product']);
+
+    if (!$product || $product->post_status !== 'publish') {
+        return new WP_Error(
+            'product_not_found',
+            'Product not found.',
+            ['status' => 404]
+        );
+    }
+
+    return rest_ensure_response([
+        'data' => simple_shop_format_product($product),
     ]);
 }
