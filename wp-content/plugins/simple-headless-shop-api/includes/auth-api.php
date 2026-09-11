@@ -133,6 +133,219 @@ function simple_shop_register_customer(WP_REST_Request $request)
     );
 }
 
+function simple_shop_create_session($user_id)
+{
+    global $wpdb;
+
+    $table_name = $wpdb->prefix . 'simple_shop_sessions';
+
+
+    /*
+     * Remove expired sessions
+     */
+
+    $wpdb->query(
+        "DELETE FROM {$table_name}
+         WHERE expires_at < UTC_TIMESTAMP()"
+    );
+
+
+    /*
+     * Generate secure random token
+     */
+
+    try {
+
+        $token = bin2hex(
+            random_bytes(32)
+        );
+
+    } catch (Throwable $e) {
+
+        return new WP_Error(
+            'token_generation_failed',
+            'Could not create authentication session.',
+            [
+                'status' => 500,
+            ]
+        );
+    }
+
+
+    /*
+     * Never store the raw token
+     */
+
+    $token_hash = hash(
+        'sha256',
+        $token
+    );
+
+
+    /*
+     * Session lifetime = 7 days
+     */
+
+    $expires_timestamp =
+        time() + (7 * DAY_IN_SECONDS);
+
+
+    $created_at = gmdate(
+        'Y-m-d H:i:s'
+    );
+
+
+    $expires_at = gmdate(
+        'Y-m-d H:i:s',
+        $expires_timestamp
+    );
+
+
+    /*
+     * Store session
+     */
+
+    $inserted = $wpdb->insert(
+
+        $table_name,
+
+        [
+            'user_id' => $user_id,
+
+            'token_hash' => $token_hash,
+
+            'created_at' => $created_at,
+
+            'expires_at' => $expires_at,
+        ],
+
+        [
+            '%d',
+            '%s',
+            '%s',
+            '%s',
+        ]
+    );
+
+
+    if ($inserted === false) {
+
+        return new WP_Error(
+            'session_creation_failed',
+            'Could not create authentication session.',
+            [
+                'status' => 500,
+            ]
+        );
+    }
+
+
+    return [
+        'token' => $token,
+
+        'expires_at' => $expires_at,
+    ];
+}
+
+function simple_shop_login_customer(WP_REST_Request $request)
+{
+    $email = $request->get_param('email');
+
+    $password = $request->get_param('password');
+
+
+    /*
+     * Authenticate through WordPress
+     */
+
+    $user = wp_authenticate(
+        $email,
+        $password
+    );
+
+
+    /*
+     * Wrong credentials
+     */
+
+    if (is_wp_error($user)) {
+
+        return new WP_Error(
+            'invalid_credentials',
+            'Invalid email or password.',
+            [
+                'status' => 401,
+            ]
+        );
+    }
+
+
+    /*
+     * Only storefront customers
+     */
+
+    if (!in_array(
+        'customer',
+        (array) $user->roles,
+        true
+    )) {
+
+        return new WP_Error(
+            'invalid_credentials',
+            'Invalid email or password.',
+            [
+                'status' => 401,
+            ]
+        );
+    }
+
+
+    /*
+     * Create session
+     */
+
+    $session = simple_shop_create_session(
+        $user->ID
+    );
+
+
+    if (is_wp_error($session)) {
+        return $session;
+    }
+
+
+    /*
+     * Return session
+     */
+
+    return rest_ensure_response([
+
+        'success' => true,
+
+        'message' => 'Login successful.',
+
+        'user' => [
+
+            'id' => $user->ID,
+
+            'name' => $user->display_name,
+
+            'email' => $user->user_email,
+
+        ],
+
+        'session' => [
+
+            'token' => $session['token'],
+
+            'expires_at' =>
+                $session['expires_at'],
+
+        ],
+
+    ]);
+}
+
 
 add_action('rest_api_init', function () {
 
@@ -167,6 +380,39 @@ add_action('rest_api_init', function () {
                 'validate_callback' => function ($value) {
                     return is_string($value)
                         && strlen($value) >= 8;
+                },
+            ],
+
+        ],
+
+    ]);
+
+    register_rest_route('shop/v1', '/auth/login', [
+
+        'methods' => WP_REST_Server::CREATABLE,
+
+        'callback' => 'simple_shop_login_customer',
+
+        'permission_callback' => '__return_true',
+
+        'args' => [
+
+            'email' => [
+                'required' => true,
+
+                'sanitize_callback' => 'sanitize_email',
+
+                'validate_callback' => function ($value) {
+                    return is_email($value);
+                },
+            ],
+
+            'password' => [
+                'required' => true,
+
+                'validate_callback' => function ($value) {
+                    return is_string($value)
+                        && $value !== '';
                 },
             ],
 

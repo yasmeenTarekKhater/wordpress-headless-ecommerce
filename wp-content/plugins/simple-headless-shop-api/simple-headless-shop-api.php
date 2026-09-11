@@ -25,6 +25,10 @@ define(
 
 function simple_shop_activate()
 {
+
+    /*
+     * Customer role
+     */
     add_role(
         'customer',
         'Customer',
@@ -32,6 +36,48 @@ function simple_shop_activate()
             'read' => true,
         ]
     );
+
+    /*
+     * Sessions table
+     */
+    simple_shop_create_sessions_table();
+}
+
+function simple_shop_create_sessions_table()
+{
+    global $wpdb;
+
+    $table_name = $wpdb->prefix . 'simple_shop_sessions';
+
+    $charset_collate = $wpdb->get_charset_collate();
+
+
+    $sql = "CREATE TABLE {$table_name} (
+
+        id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+
+        user_id BIGINT(20) UNSIGNED NOT NULL,
+
+        token_hash CHAR(64) NOT NULL,
+
+        expires_at DATETIME NOT NULL,
+
+        created_at DATETIME NOT NULL,
+
+        PRIMARY KEY  (id),
+
+        UNIQUE KEY token_hash (token_hash),
+
+        KEY user_id (user_id),
+
+        KEY expires_at (expires_at)
+
+    ) {$charset_collate};";
+
+
+    require_once ABSPATH . 'wp-admin/includes/upgrade.php';
+
+    dbDelta($sql);
 }
 
 register_activation_hook(
