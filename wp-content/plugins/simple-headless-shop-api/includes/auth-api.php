@@ -562,6 +562,88 @@ function simple_shop_get_current_customer(
     ]);
 }
 
+function simple_shop_logout_customer(
+    WP_REST_Request $request
+) {
+    global $wpdb;
+
+
+    /*
+     * Get current Bearer token
+     */
+
+    $token = simple_shop_get_bearer_token(
+        $request
+    );
+
+
+    if (is_wp_error($token)) {
+        return $token;
+    }
+
+
+    /*
+     * Convert raw token into the same
+     * hash stored in our database
+     */
+
+    $token_hash = hash(
+        'sha256',
+        $token
+    );
+
+
+    /*
+     * Sessions table
+     */
+
+    $table_name =
+        $wpdb->prefix . 'simple_shop_sessions';
+
+
+    /*
+     * Delete ONLY this session
+     */
+
+    $deleted = $wpdb->delete(
+
+        $table_name,
+
+        [
+            'token_hash' => $token_hash,
+        ],
+
+        [
+            '%s',
+        ]
+
+    );
+
+
+    /*
+     * Database error
+     */
+
+    if ($deleted === false) {
+
+        return new WP_Error(
+            'logout_failed',
+            'Could not end the authentication session.',
+            [
+                'status' => 500,
+            ]
+        );
+    }
+
+
+    return rest_ensure_response([
+
+        'success' => true,
+
+        'message' => 'Logout successful.',
+
+    ]);
+}
 
 add_action('rest_api_init', function () {
 
@@ -641,6 +723,16 @@ add_action('rest_api_init', function () {
         'methods' => WP_REST_Server::READABLE,
 
         'callback' => 'simple_shop_get_current_customer',
+
+        'permission_callback' => 'simple_shop_require_auth',
+
+    ]);
+
+    register_rest_route('shop/v1', '/auth/logout', [
+
+        'methods' => WP_REST_Server::CREATABLE,
+
+        'callback' => 'simple_shop_logout_customer',
 
         'permission_callback' => 'simple_shop_require_auth',
 
