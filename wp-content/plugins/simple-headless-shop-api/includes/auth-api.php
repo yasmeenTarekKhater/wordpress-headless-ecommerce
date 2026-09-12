@@ -347,6 +347,222 @@ function simple_shop_login_customer(WP_REST_Request $request)
 }
 
 
+function simple_shop_get_bearer_token(WP_REST_Request $request)
+{
+    $authorization = $request->get_header('authorization');
+
+
+    if (!$authorization) {
+
+        return new WP_Error(
+            'missing_token',
+            'Authentication token is required.',
+            [
+                'status' => 401,
+            ]
+        );
+    }
+
+
+    if (!preg_match(
+        '/^Bearer\s+(.+)$/i',
+        trim($authorization),
+        $matches
+    )) {
+
+        return new WP_Error(
+            'invalid_authorization_header',
+            'Invalid authorization header.',
+            [
+                'status' => 401,
+            ]
+        );
+    }
+
+
+    $token = trim($matches[1]);
+
+
+    if (!preg_match('/^[a-f0-9]{64}$/i', $token)) {
+
+        return new WP_Error(
+            'invalid_token',
+            'Invalid authentication token.',
+            [
+                'status' => 401,
+            ]
+        );
+    }
+
+
+    return $token;
+}
+
+function simple_shop_get_authenticated_user(
+    WP_REST_Request $request
+) {
+    global $wpdb;
+
+
+    /*
+     * Get Bearer token
+     */
+
+    $token = simple_shop_get_bearer_token($request);
+
+
+    if (is_wp_error($token)) {
+        return $token;
+    }
+
+
+    /*
+     * Hash provided token
+     */
+
+    $token_hash = hash(
+        'sha256',
+        $token
+    );
+
+
+    /*
+     * Find active session
+     */
+
+    $table_name =
+        $wpdb->prefix . 'simple_shop_sessions';
+
+
+    $now = gmdate('Y-m-d H:i:s');
+
+
+    $session = $wpdb->get_row(
+
+        $wpdb->prepare(
+
+            "SELECT user_id
+             FROM {$table_name}
+             WHERE token_hash = %s
+             AND expires_at > %s
+             LIMIT 1",
+
+            $token_hash,
+            $now
+        )
+
+    );
+
+
+    /*
+     * Session doesn't exist / expired
+     */
+
+    if (!$session) {
+
+        return new WP_Error(
+            'invalid_or_expired_token',
+            'Authentication session is invalid or expired.',
+            [
+                'status' => 401,
+            ]
+        );
+    }
+
+
+    /*
+     * Load WordPress user
+     */
+
+    $user = get_userdata(
+        (int) $session->user_id
+    );
+
+
+    if (!$user) {
+
+        return new WP_Error(
+            'user_not_found',
+            'Authenticated user no longer exists.',
+            [
+                'status' => 401,
+            ]
+        );
+    }
+
+
+    /*
+     * Storefront customers only
+     */
+
+    if (!in_array(
+        'customer',
+        (array) $user->roles,
+        true
+    )) {
+
+        return new WP_Error(
+            'unauthorized_user',
+            'This account cannot access the storefront.',
+            [
+                'status' => 403,
+            ]
+        );
+    }
+
+
+    return $user;
+}
+
+function simple_shop_require_auth(
+    WP_REST_Request $request
+) {
+    $user = simple_shop_get_authenticated_user(
+        $request
+    );
+
+
+    if (is_wp_error($user)) {
+        return $user;
+    }
+
+
+    /*
+     * Tell WordPress who the current user is
+     */
+
+    wp_set_current_user(
+        $user->ID
+    );
+
+
+    return true;
+}
+
+function simple_shop_get_current_customer(
+    WP_REST_Request $request
+) {
+    $user = wp_get_current_user();
+
+
+    return rest_ensure_response([
+
+        'success' => true,
+
+        'user' => [
+
+            'id' => $user->ID,
+
+            'name' => $user->display_name,
+
+            'email' => $user->user_email,
+
+        ],
+
+    ]);
+}
+
+
 add_action('rest_api_init', function () {
 
     register_rest_route('shop/v1', '/auth/register', [
@@ -417,6 +633,16 @@ add_action('rest_api_init', function () {
             ],
 
         ],
+
+    ]);
+
+    register_rest_route('shop/v1', '/auth/me', [
+
+        'methods' => WP_REST_Server::READABLE,
+
+        'callback' => 'simple_shop_get_current_customer',
+
+        'permission_callback' => 'simple_shop_require_auth',
 
     ]);
 
