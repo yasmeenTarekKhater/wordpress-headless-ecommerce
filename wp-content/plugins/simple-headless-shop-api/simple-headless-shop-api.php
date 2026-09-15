@@ -41,6 +41,14 @@ function simple_shop_activate()
      * Sessions table
      */
     simple_shop_create_sessions_table();
+
+
+    /*
+     * Password resets table
+     */
+
+    simple_shop_create_password_resets_table();
+
 }
 
 function simple_shop_create_sessions_table()
@@ -80,6 +88,60 @@ function simple_shop_create_sessions_table()
     dbDelta($sql);
 }
 
+function simple_shop_create_password_resets_table()
+{
+    global $wpdb;
+
+    $table_name =
+        $wpdb->prefix . 'simple_shop_password_resets';
+
+    $charset_collate =
+        $wpdb->get_charset_collate();
+
+
+    $sql = "CREATE TABLE {$table_name} (
+
+        id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+
+        user_id BIGINT(20) UNSIGNED NOT NULL,
+
+        otp_hash CHAR(64) NOT NULL,
+
+        otp_expires_at DATETIME NOT NULL,
+
+        attempts TINYINT UNSIGNED NOT NULL DEFAULT 0,
+
+        reset_token_hash CHAR(64) DEFAULT NULL,
+
+        reset_expires_at DATETIME DEFAULT NULL,
+
+        verified_at DATETIME DEFAULT NULL,
+
+        created_at DATETIME NOT NULL,
+
+        PRIMARY KEY  (id),
+
+        UNIQUE KEY user_id (user_id),
+
+        UNIQUE KEY reset_token_hash (reset_token_hash),
+
+        KEY otp_expires_at (otp_expires_at)
+
+    ) {$charset_collate};";
+
+
+    require_once ABSPATH
+        . 'wp-admin/includes/upgrade.php';
+
+    dbDelta($sql);
+}
+
+/*
+|--------------------------------------------------------------------------
+| Activation hook
+|--------------------------------------------------------------------------
+*/
+
 register_activation_hook(
     __FILE__,
     'simple_shop_activate'
@@ -93,3 +155,4 @@ register_activation_hook(
 
 require_once SIMPLE_SHOP_API_PATH . 'includes/products-api.php';
 require_once SIMPLE_SHOP_API_PATH . 'includes/auth-api.php';
+require_once SIMPLE_SHOP_API_PATH . 'includes/password-reset-api.php';
