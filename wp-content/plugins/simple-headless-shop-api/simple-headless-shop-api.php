@@ -156,3 +156,4 @@ register_activation_hook(
 require_once SIMPLE_SHOP_API_PATH . 'includes/products-api.php';
 require_once SIMPLE_SHOP_API_PATH . 'includes/auth-api.php';
 require_once SIMPLE_SHOP_API_PATH . 'includes/password-reset-api.php';
+require_once SIMPLE_SHOP_API_PATH . 'includes/favorites-api.php';
