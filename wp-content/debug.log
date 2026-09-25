@@ -2,3 +2,188 @@
 [18-Sep-2026 18:08:00 UTC] Simple Shop: Failed to send password reset email for user 5
 [18-Sep-2026 18:36:40 UTC] TESTING OTP CODE: 647395
 [18-Sep-2026 18:36:42 UTC] Simple Shop: Failed to send password reset email for user 5
+[19-Sep-2026 09:38:26 UTC] Automatic updates starting...
+[19-Sep-2026 09:38:26 UTC]   Automatic plugin updates starting...
+[19-Sep-2026 09:38:26 UTC]   Automatic plugin updates complete.
+[19-Sep-2026 09:38:27 UTC]   Automatic theme updates starting...
+[19-Sep-2026 09:38:27 UTC]   Automatic theme updates complete.
+[19-Sep-2026 09:38:27 UTC] Automatic updates complete.
+[19-Sep-2026 11:00:23 UTC] Automatic updates starting...
+[19-Sep-2026 11:00:23 UTC]   Automatic plugin updates starting...
+[19-Sep-2026 11:00:23 UTC]   Automatic plugin updates complete.
+[19-Sep-2026 11:00:23 UTC]   Automatic theme updates starting...
+[19-Sep-2026 11:00:23 UTC]   Automatic theme updates complete.
+[19-Sep-2026 11:00:23 UTC] Automatic updates complete.
+[19-Sep-2026 18:38:50 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: invalid_schedule, Error message: Event schedule does not exist., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[25-Sep-2026 09:50:43 UTC] Automatic updates starting...
+[25-Sep-2026 09:50:44 UTC]   Automatic plugin updates starting...
+[25-Sep-2026 09:50:44 UTC]   Automatic plugin updates complete.
+[25-Sep-2026 09:50:44 UTC]   Automatic theme updates starting...
+[25-Sep-2026 09:50:44 UTC]   Automatic theme updates complete.
+[25-Sep-2026 09:50:44 UTC] Automatic updates complete.
+[25-Sep-2026 11:36:24 UTC] Automatic updates starting...
+[25-Sep-2026 11:36:24 UTC]   Automatic plugin updates starting...
+[25-Sep-2026 11:36:24 UTC]   Automatic plugin updates complete.
+[25-Sep-2026 11:36:24 UTC]   Automatic theme updates starting...
+[25-Sep-2026 11:36:24 UTC]   Automatic theme updates complete.
+[25-Sep-2026 11:36:24 UTC] Automatic updates complete.
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_type" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_columns" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "column_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3139
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_type" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_columns" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "column_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3139
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_type" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_columns" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "column_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3139
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_type" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_columns" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "column_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3139
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_type" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_columns" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "column_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3139
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_type" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_columns" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "column_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3139
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_type" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_columns" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "column_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3139
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_type" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_columns" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "column_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3139
+[25-Sep-2026 12:42:22 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(``)' at line 1 for query ALTER TABLE wp_simple_shop_sessions ADD  `` (``) made by activate_plugin, do_action('activate_simple-headless-shop-api/simple-headless-shop-api.php'), WP_Hook->do_action, WP_Hook->apply_filters, simple_shop_activate, simple_shop_create_sessions_table, dbDelta
+[25-Sep-2026 12:42:22 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(``)' at line 1 for query ALTER TABLE wp_simple_shop_sessions ADD  `` (``) made by activate_plugin, do_action('activate_simple-headless-shop-api/simple-headless-shop-api.php'), WP_Hook->do_action, WP_Hook->apply_filters, simple_shop_activate, simple_shop_create_sessions_table, dbDelta
+[25-Sep-2026 12:42:22 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(``)' at line 1 for query ALTER TABLE wp_simple_shop_sessions ADD  `` (``) made by activate_plugin, do_action('activate_simple-headless-shop-api/simple-headless-shop-api.php'), WP_Hook->do_action, WP_Hook->apply_filters, simple_shop_activate, simple_shop_create_sessions_table, dbDelta
+[25-Sep-2026 12:42:22 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(``)' at line 1 for query ALTER TABLE wp_simple_shop_sessions ADD  `` (``) made by activate_plugin, do_action('activate_simple-headless-shop-api/simple-headless-shop-api.php'), WP_Hook->do_action, WP_Hook->apply_filters, simple_shop_activate, simple_shop_create_sessions_table, dbDelta
+[25-Sep-2026 12:42:22 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(``)' at line 1 for query ALTER TABLE wp_simple_shop_sessions ADD  `` (``) made by activate_plugin, do_action('activate_simple-headless-shop-api/simple-headless-shop-api.php'), WP_Hook->do_action, WP_Hook->apply_filters, simple_shop_activate, simple_shop_create_sessions_table, dbDelta
+[25-Sep-2026 12:42:22 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(``)' at line 1 for query ALTER TABLE wp_simple_shop_sessions ADD  `` (``) made by activate_plugin, do_action('activate_simple-headless-shop-api/simple-headless-shop-api.php'), WP_Hook->do_action, WP_Hook->apply_filters, simple_shop_activate, simple_shop_create_sessions_table, dbDelta
+[25-Sep-2026 12:42:22 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(``)' at line 1 for query ALTER TABLE wp_simple_shop_sessions ADD  `` (``) made by activate_plugin, do_action('activate_simple-headless-shop-api/simple-headless-shop-api.php'), WP_Hook->do_action, WP_Hook->apply_filters, simple_shop_activate, simple_shop_create_sessions_table, dbDelta
+[25-Sep-2026 12:42:22 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(``)' at line 1 for query ALTER TABLE wp_simple_shop_sessions ADD  `` (``) made by activate_plugin, do_action('activate_simple-headless-shop-api/simple-headless-shop-api.php'), WP_Hook->do_action, WP_Hook->apply_filters, simple_shop_activate, simple_shop_create_sessions_table, dbDelta
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_type" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_columns" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "column_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3139
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_type" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_columns" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "column_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3139
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_type" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_columns" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "column_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3139
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_type" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_columns" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "column_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3139
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_type" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_columns" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "column_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3139
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_type" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_columns" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "column_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3139
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_type" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_columns" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "column_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3139
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_type" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_columns" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "column_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3139
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_type" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_columns" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "column_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3139
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_type" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_columns" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "column_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3139
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_type" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_columns" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "column_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3139
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_type" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3101
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  strtolower(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3107
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "index_columns" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3110
+[25-Sep-2026 12:42:22 UTC] PHP Warning:  Undefined array key "column_name" in C:\xampp\htdocs\wordpress\wp-admin\includes\upgrade.php on line 3139
+[25-Sep-2026 12:42:22 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(``)' at line 1 for query ALTER TABLE wp_simple_shop_password_resets ADD  `` (``) made by activate_plugin, do_action('activate_simple-headless-shop-api/simple-headless-shop-api.php'), WP_Hook->do_action, WP_Hook->apply_filters, simple_shop_activate, simple_shop_create_password_resets_table, dbDelta
+[25-Sep-2026 12:42:22 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(``)' at line 1 for query ALTER TABLE wp_simple_shop_password_resets ADD  `` (``) made by activate_plugin, do_action('activate_simple-headless-shop-api/simple-headless-shop-api.php'), WP_Hook->do_action, WP_Hook->apply_filters, simple_shop_activate, simple_shop_create_password_resets_table, dbDelta
+[25-Sep-2026 12:42:22 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(``)' at line 1 for query ALTER TABLE wp_simple_shop_password_resets ADD  `` (``) made by activate_plugin, do_action('activate_simple-headless-shop-api/simple-headless-shop-api.php'), WP_Hook->do_action, WP_Hook->apply_filters, simple_shop_activate, simple_shop_create_password_resets_table, dbDelta
+[25-Sep-2026 12:42:22 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(``)' at line 1 for query ALTER TABLE wp_simple_shop_password_resets ADD  `` (``) made by activate_plugin, do_action('activate_simple-headless-shop-api/simple-headless-shop-api.php'), WP_Hook->do_action, WP_Hook->apply_filters, simple_shop_activate, simple_shop_create_password_resets_table, dbDelta
+[25-Sep-2026 12:42:22 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(``)' at line 1 for query ALTER TABLE wp_simple_shop_password_resets ADD  `` (``) made by activate_plugin, do_action('activate_simple-headless-shop-api/simple-headless-shop-api.php'), WP_Hook->do_action, WP_Hook->apply_filters, simple_shop_activate, simple_shop_create_password_resets_table, dbDelta
+[25-Sep-2026 12:42:22 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(``)' at line 1 for query ALTER TABLE wp_simple_shop_password_resets ADD  `` (``) made by activate_plugin, do_action('activate_simple-headless-shop-api/simple-headless-shop-api.php'), WP_Hook->do_action, WP_Hook->apply_filters, simple_shop_activate, simple_shop_create_password_resets_table, dbDelta
+[25-Sep-2026 12:42:22 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(``)' at line 1 for query ALTER TABLE wp_simple_shop_password_resets ADD  `` (``) made by activate_plugin, do_action('activate_simple-headless-shop-api/simple-headless-shop-api.php'), WP_Hook->do_action, WP_Hook->apply_filters, simple_shop_activate, simple_shop_create_password_resets_table, dbDelta
+[25-Sep-2026 12:42:22 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(``)' at line 1 for query ALTER TABLE wp_simple_shop_password_resets ADD  `` (``) made by activate_plugin, do_action('activate_simple-headless-shop-api/simple-headless-shop-api.php'), WP_Hook->do_action, WP_Hook->apply_filters, simple_shop_activate, simple_shop_create_password_resets_table, dbDelta
+[25-Sep-2026 12:42:22 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(``)' at line 1 for query ALTER TABLE wp_simple_shop_password_resets ADD  `` (``) made by activate_plugin, do_action('activate_simple-headless-shop-api/simple-headless-shop-api.php'), WP_Hook->do_action, WP_Hook->apply_filters, simple_shop_activate, simple_shop_create_password_resets_table, dbDelta
+[25-Sep-2026 12:42:22 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(``)' at line 1 for query ALTER TABLE wp_simple_shop_password_resets ADD  `` (``) made by activate_plugin, do_action('activate_simple-headless-shop-api/simple-headless-shop-api.php'), WP_Hook->do_action, WP_Hook->apply_filters, simple_shop_activate, simple_shop_create_password_resets_table, dbDelta
+[25-Sep-2026 12:42:22 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(``)' at line 1 for query ALTER TABLE wp_simple_shop_password_resets ADD  `` (``) made by activate_plugin, do_action('activate_simple-headless-shop-api/simple-headless-shop-api.php'), WP_Hook->do_action, WP_Hook->apply_filters, simple_shop_activate, simple_shop_create_password_resets_table, dbDelta
+[25-Sep-2026 12:42:22 UTC] WordPress database error You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(``)' at line 1 for query ALTER TABLE wp_simple_shop_password_resets ADD  `` (``) made by activate_plugin, do_action('activate_simple-headless-shop-api/simple-headless-shop-api.php'), WP_Hook->do_action, WP_Hook->apply_filters, simple_shop_activate, simple_shop_create_password_resets_table, dbDelta

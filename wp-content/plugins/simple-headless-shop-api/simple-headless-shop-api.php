@@ -49,6 +49,12 @@ function simple_shop_activate()
 
     simple_shop_create_password_resets_table();
 
+     /*
+     * Cart table
+     */
+
+    simple_shop_create_cart_table();
+
 }
 
 function simple_shop_create_sessions_table()
@@ -136,6 +142,49 @@ function simple_shop_create_password_resets_table()
     dbDelta($sql);
 }
 
+function simple_shop_create_cart_table()
+{
+    global $wpdb;
+
+    $table_name =
+        $wpdb->prefix . 'simple_shop_cart_items';
+
+    $charset_collate =
+        $wpdb->get_charset_collate();
+
+
+    $sql = "CREATE TABLE {$table_name} (
+
+        id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+
+        user_id BIGINT(20) UNSIGNED NOT NULL,
+
+        product_id BIGINT(20) UNSIGNED NOT NULL,
+
+        quantity INT UNSIGNED NOT NULL DEFAULT 1,
+
+        created_at DATETIME NOT NULL,
+
+        updated_at DATETIME NOT NULL,
+
+        PRIMARY KEY (id),
+
+        UNIQUE KEY user_product (user_id, product_id),
+
+        KEY user_id (user_id),
+
+        KEY product_id (product_id)
+
+    ) {$charset_collate};";
+
+
+    require_once ABSPATH
+        . 'wp-admin/includes/upgrade.php';
+
+
+    dbDelta($sql);
+}
+
 /*
 |--------------------------------------------------------------------------
 | Activation hook
@@ -157,3 +206,4 @@ require_once SIMPLE_SHOP_API_PATH . 'includes/products-api.php';
 require_once SIMPLE_SHOP_API_PATH . 'includes/auth-api.php';
 require_once SIMPLE_SHOP_API_PATH . 'includes/password-reset-api.php';
 require_once SIMPLE_SHOP_API_PATH . 'includes/favorites-api.php';
+require_once SIMPLE_SHOP_API_PATH . 'includes/cart-api.php';
