@@ -411,6 +411,309 @@ function simple_shop_add_cart_item(
     );
 }
 
+function simple_shop_update_cart_item(
+    WP_REST_Request $request
+) {
+    global $wpdb;
+
+
+    $user_id =
+        get_current_user_id();
+
+
+    $product_id =
+        absint(
+            $request->get_param(
+                'product_id'
+            )
+        );
+
+
+    $quantity =
+        absint(
+            $request->get_param(
+                'quantity'
+            )
+        );
+
+
+    $table_name =
+        $wpdb->prefix
+        . 'simple_shop_cart_items';
+
+
+    $item =
+        $wpdb->get_row(
+            $wpdb->prepare(
+                "SELECT id
+                 FROM {$table_name}
+                 WHERE user_id = %d
+                 AND product_id = %d
+                 LIMIT 1",
+
+                $user_id,
+                $product_id
+            )
+        );
+
+
+    if (!$item) {
+
+        return new WP_Error(
+            'cart_item_not_found',
+            'Product is not in the cart.',
+            [
+                'status' => 404,
+            ]
+        );
+    }
+
+
+    $product =
+        get_post($product_id);
+
+
+    if (
+        !$product
+        ||
+        $product->post_type !== 'product'
+        ||
+        $product->post_status !== 'publish'
+    ) {
+
+        return new WP_Error(
+            'product_not_found',
+            'Product not found.',
+            [
+                'status' => 404,
+            ]
+        );
+    }
+
+
+    $stock =
+        (int) get_field(
+            'stock',
+            $product_id
+        );
+
+
+    if ($quantity > $stock) {
+
+        return new WP_Error(
+            'insufficient_stock',
+            'Requested quantity exceeds available stock.',
+            [
+                'status' => 409,
+                'available_stock' => $stock,
+            ]
+        );
+    }
+
+
+    $updated =
+        $wpdb->update(
+
+            $table_name,
+
+            [
+                'quantity' =>
+                    $quantity,
+
+                'updated_at' =>
+                    gmdate('Y-m-d H:i:s'),
+            ],
+
+            [
+                'id' =>
+                    $item->id,
+            ],
+
+            [
+                '%d',
+                '%s',
+            ],
+
+            [
+                '%d',
+            ]
+        );
+
+
+    if ($updated === false) {
+
+        return new WP_Error(
+            'cart_update_failed',
+            'Could not update cart.',
+            [
+                'status' => 500,
+            ]
+        );
+    }
+
+
+    return rest_ensure_response([
+
+        'success' => true,
+
+        'message' =>
+            'Cart item updated.',
+
+        'data' =>
+            simple_shop_build_cart_response(
+                $user_id
+            ),
+
+    ]);
+}
+
+function simple_shop_remove_cart_item(
+    WP_REST_Request $request
+) {
+    global $wpdb;
+
+
+    $user_id =
+        get_current_user_id();
+
+
+    $product_id =
+        absint(
+            $request->get_param(
+                'product_id'
+            )
+        );
+
+
+    $table_name =
+        $wpdb->prefix
+        . 'simple_shop_cart_items';
+
+
+    $deleted =
+        $wpdb->delete(
+
+            $table_name,
+
+            [
+                'user_id' =>
+                    $user_id,
+
+                'product_id' =>
+                    $product_id,
+            ],
+
+            [
+                '%d',
+                '%d',
+            ]
+        );
+
+
+    if ($deleted === false) {
+
+        return new WP_Error(
+            'cart_update_failed',
+            'Could not remove product from cart.',
+            [
+                'status' => 500,
+            ]
+        );
+    }
+
+
+    if ($deleted === 0) {
+
+        return new WP_Error(
+            'cart_item_not_found',
+            'Product is not in the cart.',
+            [
+                'status' => 404,
+            ]
+        );
+    }
+
+
+    return rest_ensure_response([
+
+        'success' => true,
+
+        'message' =>
+            'Product removed from cart.',
+
+        'data' =>
+            simple_shop_build_cart_response(
+                $user_id
+            ),
+
+    ]);
+}
+
+function simple_shop_clear_cart(
+    WP_REST_Request $request
+) {
+    global $wpdb;
+
+
+    $user_id =
+        get_current_user_id();
+
+
+    $table_name =
+        $wpdb->prefix
+        . 'simple_shop_cart_items';
+
+
+    $deleted =
+        $wpdb->delete(
+
+            $table_name,
+
+            [
+                'user_id' =>
+                    $user_id,
+            ],
+
+            [
+                '%d',
+            ]
+        );
+
+
+    if ($deleted === false) {
+
+        return new WP_Error(
+            'cart_clear_failed',
+            'Could not clear cart.',
+            [
+                'status' => 500,
+            ]
+        );
+    }
+
+
+    return rest_ensure_response([
+
+        'success' => true,
+
+        'message' =>
+            'Cart cleared successfully.',
+
+        'data' => [
+
+            'items' => [],
+
+            'summary' => [
+                'items_count' => 0,
+                'total_quantity' => 0,
+                'subtotal' => 0,
+            ],
+
+        ],
+
+    ]);
+}
+
 
 add_action('rest_api_init', function () {
 
